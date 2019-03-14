@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>主页</title>
+</head>
+<body>
+<h1>我是主页</h1>
+<p>欢迎登录<a href="#?id={{ user.get('id') }}">{{ user.get("user_name", "游客") }}</a> | <a href="/login?op=login_out">注销</a></p>
+<img src="{{ static_url('images/'+user.get('img_uri', '')) }}" width="120px" height="120px">
+<p>您上次登录时间是：{{ user.get("last_login", "") }}</p>
+</body>
+</html>
